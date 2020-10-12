@@ -41,9 +41,18 @@ int main(int argc,char** argv)
 	unsigned long fileSize = 0;
 
 	off_t truncSize = 0;
+	
+	//wrong parameter numbers
 	if(argc != 3)
 	{
 		fprintf(stderr,"Usage...");
+		exit(0);
+	}
+	
+	//invalid line number input
+	if(atoi(argv[2]) <= 0)
+	{
+		fprintf(stderr,"Invalid line number!!!\n");
 		exit(0);
 	}
 	
