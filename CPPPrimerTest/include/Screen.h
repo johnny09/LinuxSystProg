@@ -5,14 +5,15 @@
 #include <vector>
 class Screen
 {
-typedef std::string::size_type pos;
+
 public:
+    typedef std::string::size_type pos;
     Screen() = default;
     Screen(pos height,pos width);
     Screen(pos height,pos width,char c);
     char get() const;
     char get(pos row,pos col) const;
-    Screen& move(pos height,pos width);
+    Screen& move(pos row,pos col);
 
     Screen& set(char c);
     Screen& set(pos row,pos col,char c);

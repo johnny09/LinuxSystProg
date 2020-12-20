@@ -1,4 +1,5 @@
 #include "Screen.h"
+#include <iostream>
  
 Screen::Screen(pos ht,pos wd):
                 height(ht),width(wd),contents(ht*wd,' '){};
